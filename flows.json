@@ -1,0 +1,60 @@
+[
+    {
+        "id": "57eab2e64970eeeb",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0120f9207fea4d45",
+        "type": "cloudantplus",
+        "host": "http://localhost:5930",
+        "name": "couchdb(local-docker)"
+    },
+    {
+        "id": "ebef4a8baf019985",
+        "type": "inject",
+        "z": "57eab2e64970eeeb",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 330,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "328e61602a294462",
+        "type": "cloudantplus in",
+        "z": "57eab2e64970eeeb",
+        "name": "",
+        "cloudant": "0120f9207fea4d45",
+        "database": "members",
+        "service": "_ext_",
+        "search": "_id_",
+        "design": "",
+        "index": "",
+        "x": 660,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    }
+]
